@@ -112,7 +112,8 @@ nav {
 	padding: 30px 0;
 }
 .home {
-	background: url('media/night-fx.jpg');
+	background-color: #888;
+	background-image: url('media/night-fx.jpg');
 	background-size: cover;
 	color: #EEE;
 }
@@ -166,7 +167,8 @@ nav {
 	padding-bottom: 20px;
 }
 .about {
-	background: url('media/daylight-fx.jpg');
+	background-color: #BBE;
+	background-image: url('media/daylight-fx.jpg');
 	background-size: cover;
 }
 .about > button {
@@ -236,14 +238,16 @@ nav {
 	color: #BBE;	
 }
 .motivation {
-	background: url('media/satellite-fx.png');
+	background-color: #888;
+	background-image: url('media/satellite-fx.png');
 	background-size: cover;
 }
 .motivation > * {
 	color: #EEE;
 }
 .people {
-	background: url('media/aerial-fx.jpg');
+	background-color: #BBE;
+	background-image: url('media/aerial-fx.jpg');
 	background-size: cover;
 }
 .people > div {
@@ -273,7 +277,8 @@ nav {
 	padding-bottom: 10px;
 }
 .join {
-	background: url('media/atmosphere-fx.jpg');
+	background-color: #888;
+	background-image: url('media/atmosphere-fx.jpg');
 }
 .join > * {
 	color: #EEE;
