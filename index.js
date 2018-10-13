@@ -81,3 +81,7 @@ document.querySelector('.join-button').addEventListener('click', () => {
   scrollIt(document.querySelector('.join'), 300, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
+document.querySelector('.join-button-2').addEventListener('click', () => {
+  scrollIt(document.querySelector('.join'), 300, 'easeInOut');
+	document.querySelector('.menu').classList.remove('open');
+});

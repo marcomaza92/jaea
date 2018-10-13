@@ -109,12 +109,15 @@ nav {
 	position: relative;
 	min-height: 100vh;
 	height: 100%;
+	padding: 30px 0;
 }
 .home {
+	background: url('media/night-fx.jpg');
+	background-size: cover;
 	color: #EEE;
 }
 .home-content {
-	transform: translateY(15vh);
+	transform: translateY(10vh);
 }
 .home-content * {
 	padding: 15px 0;
@@ -162,8 +165,9 @@ nav {
 .join > p {
 	padding-bottom: 20px;
 }
-.about > img {
-	opacity: 0.25;
+.about {
+	background: url('media/daylight-fx.jpg');
+	background-size: cover;
 }
 .about > button {
 	display: block;
@@ -199,7 +203,24 @@ nav {
 	box-shadow: none;
 	border: 1px solid #BBE;
 }
-				
+.open-about {
+	width: 80%;
+	height: 48px;
+	display: block;
+	border: 2px solid #222;
+	margin: 30px auto;
+	padding: 0;
+	text-align: center;
+	line-height: 44px; /* 2px border x2 */
+	text-decoration: none;
+	color: #222;
+	transition: all 0.25s ease-in-out;
+	font-size: 1.25em;
+}
+.open-about:hover {
+	color: #22B;
+	border-color: #22B;
+}
 .close-about-objetives {
 	border: 0;
 	box-shadow: none;
@@ -214,14 +235,16 @@ nav {
 .close-about-objetives:hover {
 	color: #BBE;	
 }
+.motivation {
+	background: url('media/satellite-fx.png');
+	background-size: cover;
+}
 .motivation > * {
 	color: #EEE;
 }
-.motivation > img {
-	filter: brightness(0.25);
-}
-.people > img {
-	filter: contrast(75%);
+.people {
+	background: url('media/aerial-fx.jpg');
+	background-size: cover;
 }
 .people > div {
 	overflow: auto;
@@ -230,46 +253,31 @@ nav {
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-.people > div img {
-	display: inline-block;
-	width: 50%;
-	height: 100%;
-	vertical-align: middle;
-	padding: 0 10px;
+.people > div div {
+	padding: 0 15px;
 	padding-bottom: 20px;
-	float: left;
+	text-align: center;
 }
-.people > div:first-of-type img:last-of-type {
+.people > div a {
+	text-decoration: none;
+	color: #222;
+	transition: all 0.25s ease-in-out;
+}
+.people > div a:hover {
+	color: #22B;
+}
+.people > div img {
 	display: block;
-	width: 90%;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
-	clear: both;
-	float: none;
+	padding-bottom: 10px;
 }
-.people > div:last-of-type img:nth-of-type(1) {
-	width: 35%;
-}
-.people > div:last-of-type img:nth-of-type(2) {
-	width: 65%;
-}
-.people > div:last-of-type img:nth-of-type(3) {
-	width: 55%;
-}
-.people > div:last-of-type img:nth-of-type(4) {
-	width: 45%;
-}
-.people > div:last-of-type img:nth-of-type(5) {
-	display: block;
-	margin: 0 auto;
-	width: 35%;
-	clear: both;
-	float: none;
+.join {
+	background: url('media/atmosphere-fx.jpg');
 }
 .join > * {
 	color: #EEE;
-}
-.join > img {
-	filter: brightness(0.5);
 }
 .join > a {
 	display: block;
@@ -297,7 +305,7 @@ footer p {
 }
 @media (min-width: 576px) {
 	.home-content {
-		transform: translateY(20vh);
+		transform: translateY(15vh);
 		width: 80%;
 		margin: 0 auto;
 	}
@@ -331,7 +339,7 @@ footer p {
 		font-size: 1.25em;
 		padding-bottom: 40px;
 	}
-	.people > div img {
+	.people > div div {
 		padding-bottom: 40px;
 	}
 }
@@ -345,47 +353,32 @@ footer p {
 	.people > h3 {
 		font-size: 1.5em;
 	}
-	.people > div img {
+	.people > div div {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
-	.people > div:first-of-type img,
-	.people > div:first-of-type img:last-of-type {
+	.people > div:first-of-type div {
+		width: 50%;
+		float: left;
+	}			
+	.people > div:last-of-type div {
+		width: calc(50% - 2px);
 		display: inline-block;
-		width: 33.33%;
-		padding-top: 40px;
-		padding-bottom: 40px;
 	}
-	.people > div:first-of-type img:nth-of-type(1) {
-		width: 30%
+	.people > div:first-of-type div:nth-of-type(3),
+	.people > div:last-of-type div:nth-of-type(5) {
+		width: 100%;
 	}
-	.people > div:first-of-type img:nth-of-type(2) {
-		width: 25%
+	.people > div:first-of-type div:nth-of-type(2) img,
+	.people > div:first-of-type div:nth-of-type(3) img {
+		width: 80%;
 	}
-	.people > div:first-of-type img:nth-of-type(3) {
-		width: 45%
-	}
-	.people > div:last-of-type img:nth-of-type(1) {
-		width: 15%
-	}
-	.people > div:last-of-type img:nth-of-type(2) {
-		width: 30%
-	}
-	.people > div:last-of-type img:nth-of-type(3) {
-		width: 55%
-	}
-	.people > div:last-of-type img:nth-of-type(4) {
-		clear: both;
-		width: 75%
-	}
-	.people > div:last-of-type img:nth-of-type(5) {
-		display: inline-block;
-		clear: both;
-		float: none;
-		width: 25%
+	.people > div:last-of-type div:nth-of-type(5) img {
+		width: 50%;
 	}
 	.home-content a,
 	.about > button,
+	.open-about,
 	.join > a {
 		width: 50%;
 	}
@@ -400,15 +393,23 @@ footer p {
 	.home-content a {
 		padding-bottom: 15px;
 	}
-	.home-content a,
+	.home-content a {
+		line-height: 64px;
+	}
 	.join > a {
 		line-height: 72px;
+	}
+	.open-about {
+		line-height: 92px;
 	}
 	.about > *,
 	.motivation > *,
 	.people > *,
 	.join > * {
 		padding: 0 120px;
+	}
+	.open-about {
+		padding: 0 100px;
 	}
 	.about > h2,
 	.motivation > h2,
@@ -426,6 +427,7 @@ footer p {
 	}
 	.home-content a,
 	.about > button,
+	.open-about,
 	.join > a {
 		width: 40%;
 		height: 96px;
@@ -433,25 +435,6 @@ footer p {
 	.about-objetives p {
 		padding-top: 30px;
 		padding-bottom: 30px;
-	}
-	.people > div:last-of-type img:nth-of-type(1) {
-		width: 15%
-	}
-	.people > div:last-of-type img:nth-of-type(2) {
-		width: 20%
-	}
-	.people > div:last-of-type img:nth-of-type(3) {
-		width: 30%
-	}
-	.people > div:last-of-type img:nth-of-type(4) {
-		clear: none;
-		width: 25%
-	}
-	.people > div:last-of-type img:nth-of-type(5) {
-		display: inline-block;
-		clear: none;
-		float: left;
-		width: 10%
 	}
 }
 @media (min-width: 1200px) {
@@ -486,7 +469,7 @@ footer p {
 	.motivation > *,
 	.people > *,
 	.join > * {
-		padding: 0 160px;
+		padding: 0 240px;
 	}
 	.about > h2,
 	.motivation > h2,
@@ -503,55 +486,38 @@ footer p {
 		padding-bottom: 40px;
 	}
 	.people > div {
+		float: none;
+		clear: both;
+		display: table;
 		width: 100%;
 		margin: 0 auto;
 	}
-	.people > div:last-of-type img {
-		width: 25%;
-	}
-	.people > div img,
-	.people > div img:last-of-type {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-	.people > div img {
-		padding-left: 80px;
-		padding-right: 80px;
-	}
-	.people > div:first-of-type img:nth-of-type(1) {
-		width: 30%
-	}
-	.people > div:first-of-type img:nth-of-type(2) {
-		width: 25%
-	}
-	.people > div:first-of-type img:nth-of-type(3) {
-		width: 40%
-	}
-	.people > div:last-of-type img:nth-of-type(1) {
-		width: 20%
-	}
-	.people > div:last-of-type img:nth-of-type(2) {
-		width: 25%
-	}
-	.people > div:last-of-type img:nth-of-type(3) {
-		width: 30%
-	}
-	.people > div:last-of-type img:nth-of-type(4) {
+	.people > div:first-of-type div {
+		width: 33.33%;
+		float: none;
 		clear: both;
-		width: 35%
+		display: table-cell;
+		vertical-align: bottom;
 	}
-	.people > div:last-of-type img:nth-of-type(5) {
-		display: inline-block;
-		clear: none;
-		float: left;
-		width: 20%
+	.people > div:last-of-type div {
+		width: 20%;
+		float: none;
+		clear: both;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.people > div:first-of-type div img,
+	.people > div:last-of-type div img {
+		width: 100%;
 	}
 	.home-content a,
 	.about > button,
+	.open-about,
 	.join > a {
-		width: 30%;
+		width: 25%;
 	}
-	.about > button {
+	.about > button,
+	.open-about {
 		padding: 0;
 	}
 	.about-objetives p {
