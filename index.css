@@ -307,6 +307,14 @@ footer p {
 	color: #EEE;
 	padding: 10px;
 }
+footer p a {
+	color: #BBE;
+	text-decoration: none;
+	transition: color 0.25s ease-in-out;
+}
+footer p a:hover {
+	color: #FFF;
+}
 @media (min-width: 576px) {
 	.home-content {
 		transform: translateY(15vh);
@@ -369,17 +377,17 @@ footer p {
 		width: calc(50% - 3px);
 		display: inline-block;
 	}
-	.people > div:first-of-type div:nth-of-type(3),
-	.people > div:last-of-type div:nth-of-type(5) {
+	.people > div:first-of-type div:nth-of-type(3)
+	/* .people > div:last-of-type div:nth-of-type(8) */ {
 		width: 100%;
 	}
 	.people > div:first-of-type div:nth-of-type(2) img,
 	.people > div:first-of-type div:nth-of-type(3) img {
 		width: 80%;
 	}
-	.people > div:last-of-type div:nth-of-type(5) img {
+	/* .people > div:last-of-type div:nth-of-type(8) img {
 		width: 50%;
-	}
+	} */
 	.home-content a,
 	.about > button,
 	.open-about,
@@ -504,7 +512,7 @@ footer p {
 		vertical-align: bottom;
 	}
 	.people > div:last-of-type div {
-		width: 20%;
+		width: 12.5%;
 		float: none;
 		clear: both;
 		display: table-cell;
