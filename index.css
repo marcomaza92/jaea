@@ -378,16 +378,16 @@ footer p a:hover {
 		display: inline-block;
 	}
 	.people > div:first-of-type div:nth-of-type(3)
-	/* .people > div:last-of-type div:nth-of-type(8) */ {
+	.people > div:last-of-type div:nth-of-type(9) {
 		width: 100%;
 	}
 	.people > div:first-of-type div:nth-of-type(2) img,
 	.people > div:first-of-type div:nth-of-type(3) img {
 		width: 80%;
 	}
-	/* .people > div:last-of-type div:nth-of-type(8) img {
+	.people > div:last-of-type div:nth-of-type(9) img {
 		width: 50%;
-	} */
+	}
 	.home-content a,
 	.about > button,
 	.open-about,
@@ -500,9 +500,10 @@ footer p a:hover {
 	.people > div {
 		float: none;
 		clear: both;
-		display: table;
+		display: block;
 		width: 100%;
 		margin: 0 auto;
+		font-size: 0;
 	}
 	.people > div:first-of-type div {
 		width: 33.33%;
@@ -512,15 +513,24 @@ footer p a:hover {
 		vertical-align: bottom;
 	}
 	.people > div:last-of-type div {
-		width: 12.5%;
+		width: 25%;
 		float: none;
 		clear: both;
-		display: table-cell;
+		display: inline-block;
 		vertical-align: middle;
 	}
-	.people > div:first-of-type div img,
-	.people > div:last-of-type div img {
+	.people > div:last-of-type div:nth-of-type(5),
+	.people > div:last-of-type div:nth-of-type(6),
+	.people > div:last-of-type div:nth-of-type(7),
+	.people > div:last-of-type div:nth-of-type(8),
+	.people > div:last-of-type div:nth-of-type(9) {
+		width: 20%;
+	}
+	.people > div:first-of-type div img {
 		width: 100%;
+	}
+	.people > div:last-of-type div img {
+		width: 75%;
 	}
 	.home-content a,
 	.about > button,
