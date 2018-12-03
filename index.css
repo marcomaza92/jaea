@@ -205,7 +205,8 @@ nav {
 	box-shadow: none;
 	border: 1px solid #BBE;
 }
-.open-about {
+.open-about,
+.open-declaration {
 	width: 80%;
 	height: 48px;
 	display: block;
@@ -219,7 +220,13 @@ nav {
 	transition: all 0.25s ease-in-out;
 	font-size: 1.25em;
 }
-.open-about:hover {
+.open-declaration {
+	line-height: initial;
+	height: auto;
+	font-weight: bold;
+}
+.open-about:hover,
+.open-declaration:hover {
 	color: #22B;
 	border-color: #22B;
 }
@@ -283,7 +290,8 @@ nav {
 .join > * {
 	color: #EEE;
 }
-.join > a {
+.join > a,
+.agenda {
 	display: block;
 	width: 80%;
 	margin: 0 auto;
@@ -299,6 +307,17 @@ nav {
 }
 .join > a:hover {
 	background: #EEE;
+}
+.join > .agenda {
+	background: transparent;
+	border: 2px solid #BBE;
+	font-weight: normal;
+	transition: all 0.25s ease-in-out;
+}
+.join > .agenda:hover {
+	background: transparent;
+	color: #EEE;
+	border: 2px solid #EEE;
 }
 footer p {
 	margin: 0;
@@ -354,6 +373,10 @@ footer p a:hover {
 	.people > div div {
 		padding-bottom: 40px;
 	}
+	.open-declaration {
+		line-height: 42px;
+		height: 48px;
+	}
 }
 @media (min-width: 768px) {
 	.about-objetives h3 {
@@ -380,22 +403,27 @@ footer p a:hover {
 		width: 50%;
 		display: inline-block;
 	}
-	.people > div:first-of-type div:nth-of-type(3),
-	.people > div:last-of-type div:nth-of-type(9) {
+	.people > div:first-of-type div:nth-of-type(3)
+	/* .people > div:last-of-type div:nth-of-type(9) */ {
 		width: 100%;
 	}
 	.people > div:first-of-type div:nth-of-type(2) img,
 	.people > div:first-of-type div:nth-of-type(3) img {
 		width: 80%;
 	}
-	.people > div:last-of-type div:nth-of-type(9) img {
+	/* .people > div:last-of-type div:nth-of-type(9) img {
 		width: 50%;
 	}
+	*/
 	.home-content a,
 	.about > button,
 	.open-about,
+	.open-declaration,
 	.join > a {
 		width: 50%;
+	}
+	.open-declaration {
+		padding: 0;
 	}
 }
 @media (min-width: 992px) {
@@ -423,7 +451,8 @@ footer p a:hover {
 	.join > * {
 		padding: 0 120px;
 	}
-	.open-about {
+	.open-about,
+	.open-declaration {
 		padding: 0 100px;
 	}
 	.about > h2,
@@ -443,6 +472,7 @@ footer p a:hover {
 	.home-content a,
 	.about > button,
 	.open-about,
+	.open-declaration,
 	.join > a {
 		width: 40%;
 		height: 96px;
@@ -450,6 +480,10 @@ footer p a:hover {
 	.about-objetives p {
 		padding-top: 30px;
 		padding-bottom: 30px;
+	}
+	.open-declaration {
+		padding: 0;
+		line-height: 96px;
 	}
 }
 @media (min-width: 1200px) {
@@ -526,8 +560,9 @@ footer p a:hover {
 	.people > div:last-of-type div:nth-of-type(6),
 	.people > div:last-of-type div:nth-of-type(7),
 	.people > div:last-of-type div:nth-of-type(8),
-	.people > div:last-of-type div:nth-of-type(9) {
-		width: 20%;
+	.people > div:last-of-type div:nth-of-type(9),
+	.people > div:last-of-type div:nth-of-type(10) {
+		width: 16.66%;
 	}
 	.people > div:first-of-type div img {
 		width: 100%;
@@ -538,11 +573,13 @@ footer p a:hover {
 	.home-content a,
 	.about > button,
 	.open-about,
+	.open-declaration,
 	.join > a {
 		width: 25%;
 	}
 	.about > button,
-	.open-about {
+	.open-about,
+	.open-declaration{
 		padding: 0;
 	}
 	.about-objetives p {
